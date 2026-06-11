@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRIS — Student Result Intelligence System</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🎓</div>
+    <div>
+      <div class="logo-title">SRIS</div>
+      <div class="logo-sub">Intelligence System</div>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-page="dashboard">
+      <span class="nav-icon">⬡</span> Dashboard
+    </a>
+    <a href="#" class="nav-item" data-page="students">
+      <span class="nav-icon">👤</span> Students
+    </a>
+    <a href="#" class="nav-item" data-page="analytics">
+      <span class="nav-icon">📊</span> Analytics
+    </a>
+    <a href="#" class="nav-item" data-page="prediction">
+      <span class="nav-icon">🔮</span> Prediction
+    </a>
+    <a href="#" class="nav-item" data-page="leaderboard">
+      <span class="nav-icon">🏆</span> Leaderboard
+    </a>
+    <a href="#" class="nav-item" data-page="settings">
+      <span class="nav-icon">⚙</span> Settings
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-badge">
+      <div class="user-avatar" id="userAvatar">A</div>
+      <div>
+        <div class="user-name" id="userName">Admin</div>
+        <div class="user-role" id="userRole">admin</div>
+      </div>
+      <button class="logout-btn" onclick="logout()" title="Logout">↩</button>
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="main-content" id="mainContent">
+  <div id="page-dashboard" class="page active"></div>
+  <div id="page-students" class="page"></div>
+  <div id="page-analytics" class="page"></div>
+  <div id="page-prediction" class="page"></div>
+  <div id="page-leaderboard" class="page"></div>
+  <div id="page-settings" class="page"></div>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal-overlay" style="display:none">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
